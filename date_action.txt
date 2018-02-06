@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+###
+#get current date
+#date +%s
+#then add however many seconds to it
+#set y to that many second
+#
+#to get the numeric value of a date....
+#date --date='Mon Jan  1 23:51:41 EST 2032' +%s
+#this will set x to now
+#it will check it against its kill timer...y
+#if now is less than kill time, execute command, maybe a reboot...maybe a reboot in a startup script..
+#if kill timer has passed, it deletes itself, and does whatever else you might code here
+
+####example use case
+####call script in a startup script.
+####computer keeps shutting down until....time
+####then the script is gone
+
+
+x=`date +%s`
+y=1956631901
+#y is set to
+
+if [ $x -lt $y ]; then
+    echo "Hello"
+    #init 0???
+else
+    rm $0
+fi
+
+
