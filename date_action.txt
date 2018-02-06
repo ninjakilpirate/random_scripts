@@ -22,7 +22,7 @@
 
 x=`date +%s`
 y=1956631901
-#y is set to
+#y is set to sometime in 2032 by here...so change it
 
 if [ $x -lt $y ]; then
     echo "Hello"
